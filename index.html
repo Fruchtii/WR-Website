@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystery Manor Adventure</title>
+    <title>Beteiligungsfinanzierung Erklärt</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>Mystery Manor Adventure</h1>
-        <div id="scene"></div>
-        <div id="inventory"></div>
-        <div id="dialog"></div>
+    <div id="app-container">
+        <h1>Beteiligungsfinanzierung Verstehen</h1>
+        <div id="content"></div>
+        <div id="navigation">
+            <button id="prev-btn" onclick="navigate('prev')">Zurück</button>
+            <button id="next-btn" onclick="navigate('next')">Weiter</button>
+        </div>
+        <div id="progress-bar"></div>
     </div>
-    <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
