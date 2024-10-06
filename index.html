@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beteiligungsfinanzierung</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .button {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #2980b9;
+        }
+        .hidden {
+            display: none;
+        }
+        #quiz {
+            background: #ecf0f1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        #timeline a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #glossar a {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        #case-study-details, #glossary-term-details, #process-details {
+            background: #ecf0f1;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Beteiligungsfinanzierung</h1>
+        
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="button" onclick="showSection('startseite')">Startseite</a>
+            <a href="#" class="button" onclick="showSection('arten')">Arten</a>
+            <a href="#" class="button" onclick="showSection('vorteile-nachteile')">Vor- und Nachteile</a>
+            <a href="#" class="button" onclick="showSection('prozess')">Prozess</a>
+            <a href="#" class="button" onclick="showSection('fallstudien')">Fallstudien</a>
+            <a href="#" class="button" onclick="showSection('glossar')">Glossar</a>
+            <a href="#" class="button" onclick="showSection('quiz')">Quiz</a>
+        </nav>
+
+        <!-- Startseite -->
+        <section id="startseite">
+            <h2>Was ist Beteiligungsfinanzierung?</h2>
+            <p>Haben Sie sich schon einmal gefragt, wie Unternehmen wachsen und neue Projekte finanzieren können, ohne Kredite aufzunehmen? Hier kommt die Beteiligungsfinanzierung ins Spiel. Unternehmen erhalten Kapital, indem sie Anteile an Investoren vergeben, die damit Teilhaber werden.</p>
+            <a href="#" class="button" onclick="showSection('arten')">Wie funktioniert es?</a>
+            <video width="320" height="240" controls>
+                <source src="intro_video.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+        </section>
+
+        <!-- Arten der Beteiligungsfinanzierung -->
+        <section id="arten" class="hidden">
+            <h2>Die Hauptformen der Beteiligungsfinanzierung</h2>
+            <p>Die Beteiligungsfinanzierung lässt sich in zwei Hauptformen unterteilen: Eigenkapitalfinanzierung und Mezzanine-Finanzierung.</p>
+            <a href="#" class="button" onclick="showDetails('eigenkapital')">Eigenkapitalfinanzierung</a>
+            <a href="#" class="button" onclick="showDetails('mezzanine')">Mezzanine-Finanzierung</a>
+            
+            <div id="eigenkapital" class="hidden">
+                <h3>Eigenkapitalfinanzierung</h3>
+                <p>Bei der Eigenkapitalfinanzierung erhalten Investoren Anteile am Unternehmen, wie Aktien oder GmbH-Anteile. Sie werden zu Miteigentümern und haben sowohl Mitspracherechte als auch einen Anspruch auf einen Anteil am Unternehmensgewinn. Die Höhe der Beteiligung und der Einfluss, den die Investoren ausüben können, hängt von der Anzahl der gekauften Anteile ab.</p>
+                <video width="320" height="240" controls>
+                    <source src="eigenkapital_video.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+            </div>
+            
+            <div id="mezzanine" class="hidden">
+                <h3>Mezzanine-Finanzierung</h3>
+                <p>Mezzanine-Finanzierung ist eine hybride Finanzierungsform, die zwischen Eigen- und Fremdkapital liegt. Investoren erhalten keine direkten Anteile am Unternehmen, sondern ein nachrangiges Darlehen oder stille Beteiligungen. Dies bedeutet, dass sie im Falle einer Insolvenz erst nach den Gläubigern bedient werden, haben jedoch oft das Recht, unter bestimmten, vorteilhaften Bedingungen Anteile zu erwerben.</p>
+                <video width="320" height="240" controls>
+                    <source src="mezzanine_video.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+            </div>
+        </section>
+
+        <!-- Vorteile und Nachteile -->
+        <section id="vorteile-nachteile" class="hidden">
+            <h2>Vorteile und Nachteile der Beteiligungsfinanzierung</h2>
+            <h3>Vorteile</h3>
+            <ul>
+                <li>Kein Rückzahlungszwang: Im Gegensatz zu Krediten müssen die aufgenommenen Mittel nicht zurückgezahlt werden. Investoren beteiligen sich am Unternehmen und tragen das Risiko mit.</li>
+                <li>Mehr Eigenkapital: Die Erhöhung des Eigenkapitals verbessert die finanzielle Stabilität des Unternehmens und erhöht die Kreditwürdigkeit.</li>
+                <li>Risikoaufteilung: Das unternehmerische Risiko wird auf mehrere Investoren verteilt, was das Risiko eines Einzelnen minimiert.</li>
+            </ul>
+            <h3>Nachteile</h3>
+            <ul>
+                <li>Verlust der Kontrolle: Mit Investoren an Bord verlieren die ursprünglichen Eigentümer teilweise die Kontrolle über das Unternehmen. Investoren haben oft Mitspracherechte und können Entscheidungen beeinflussen.</li>
+                <li>Gewinnbeteiligung: Die Investoren erwarten einen Anteil am Gewinn, was bedeutet, dass zukünftige Erträge geteilt werden müssen.</li>
+            </ul>
+            <video width="320" height="240" controls>
+                <source src="vor_nachteile_video.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+        </section>
+
+        <!-- Prozess der Beteiligungsfinanzierung -->
+        <section id="prozess" class="hidden">
+            <h2>Wie funktioniert der Prozess der Beteiligungsfinanzierung?</h2>
+            <div id="timeline">
+                <a href="#" onclick="showProcessDetails('bewertung')">Unternehmensbewertung</a>
+                <a href="#" onclick="showProcessDetails('investorensuche')">Investorensuche und -ansprache</a>
+                <a href="#" onclick="showProcessDetails('verhandlung')">Verhandlung der Konditionen</a>
+                <a href="#" onclick="showProcessDetails('vertrag')">Unterzeichnung des Vertrags</a>
+                <a href="#" onclick="showProcessDetails('monitoring')">Nachbereitung und Monitoring</a>
+            </div>
+            <div id="process-details"></div>
+            <video width="320" height="240" controls>
+                <source src="prozess_video.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+        </section>
+
+        <!-- Anwendungsbeispiele und Fallstudien -->
+        <section id="fallstudien" class="hidden">
+            <h2>Erfolgsbeispiele: Wie Unternehmen von Beteiligungsfinanzierung profitiert haben</h2>
+            <a href="#" class="button" onclick="showCaseStudy('tesla')">Tesla</a>
+            <a href="#" class="button" onclick="showCaseStudy('delivery-hero')">Delivery Hero</a>
+            <div id="case-study-details"></div>
+        </section>
+
+        <!-- Glossar -->
+        <section id="glossar" class="hidden">
+            <h2>Wichtige Begriffe verstehen</h2>
+            <a href="#" onclick="showGlossaryTerm('eigenkapital')">Eigenkapital</a>
+            <a href="#" onclick="showGlossaryTerm('mezzanine-kapital')">Mezzanine-Kapital</a>
+            <a href="#" onclick="showGlossaryTerm('dividende')">Dividende</a>
+            <a href="#" onclick="showGlossaryTerm('unternehmensbewertung')">Unternehmensbewertung</a>
+            <a href="#" onclick="showGlossaryTerm('stille-beteiligung')">Stille Beteiligung</a>
+            <div id="glossary-term-details"></div>
+        </section>
+
+        <!-- Quiz -->
+        <section id="quiz" class="hidden">
+            <h2>Testen Sie Ihr Wissen zur Beteiligungsfinanzierung</h2>
+            <div id="quiz-container"></div>
+            <button class="button" onclick="checkAnswers()">Antworten überprüfen</button>
+            <div id="quiz-results"></div>
+        </section>
+
+        <!-- Abschluss -->
+        <section id="abschluss" class="hidden">
+            <h2>Abschlusszusammenfassung</h2>
+            <p>Danke, dass Sie unsere interaktive Erklärung zur Beteiligungsfinanzierung genutzt haben. Wir hoffen, Sie konnten wichtige Einblicke gewinnen!</p>
+            <video width="320" height="240" controls>
+                <source src="abschluss_video.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function showDetails(detailId) {
+            document.querySelectorAll('#arten > div').forEach(div => div.classList.add('hidden'));
+            document.getElementById(detailId).classList.remove('hidden');
+        }
+
+        function showProcessDetails(step) {
+            const details = {
+                'bewertung': 'Der erste Schritt ist eine präzise Bewertung des Unternehmens. Wie viel ist das Unternehmen wert? Diese Bewertung bestimmt, wie viele Anteile ausgegeben werden und wie viel Kapital das Unternehmen dafür erhält.',
+                'investorensuche': 'Unternehmen müssen geeignete Investoren finden und diese von einer Beteiligung überzeugen. Hier spielen Geschäftspläne und Präsentationen eine wichtige Rolle.',
+                'verhandlung': 'Sind Investoren gefunden, müssen die genauen Konditionen verhandelt werden. Welche Rechte und Pflichten haben die Investoren? Wie viel Einfluss bekommen sie?',
+                'vertrag': 'Nach der Einigung wird der Beteiligungsvertrag unterzeichnet, und das Kapital fließt ins Unternehmen.',
+                'monitoring': 'Auch nach der Beteiligung bleibt die Beziehung zu den Investoren wichtig. Regelmäßige Berichte und Meetings stellen sicher, dass beide Seiten zufrieden sind.'
+            };
+            document.getElementById('process-details').innerHTML = details[step];
+        }
+
+        function showCaseStudy(company) {
+            const studies = {
+                'tesla': 'Tesla hat immer wieder Eigenkapitalfinanzierung genutzt, um sein schnelles Wachstum zu finanzieren. In den Anfangsjahren war Tesla ein junges, wachsendes Unternehmen mit ambitionierten Plänen, aber es benötigte viel Kapital, um die teure Produktion und Entwicklung von Elektrofahrzeugen voranzutreiben. Tesla gab mehrmals neue Aktien aus, um frisches Eigenkapital von Investoren zu erhalten. So konnte das Unternehmen Milliarden Dollar einnehmen, ohne sich zu stark auf Fremdkapital zu verlassen. Dank der kontinuierlichen Eigenkapitalfinanzierung konnte Tesla seine Modellpalette ausbauen und seine Produktionskapazitäten erheblich erhöhen.',
+                'delivery-hero': 'Delivery Hero hat sowohl Eigenkapital- als auch Mezzanine-Finanzierung genutzt, um seine Expansion in internationale Märkte zu finanzieren. Das Unternehmen wollte seine Präsenz in neuen Märkten ausbauen und akquirierte dazu verschiedene lokale Lieferdienste. Dies erforderte erhebliches Kapital. Delivery Hero führte mehrere Finanzierungsrunden durch, bei denen es Eigenkapital aufnahm, insbesondere durch den Börsengang (IPO) im Jahr 2017. Zusätzlich nutzte Delivery Hero Mezzanine-Finanzierung, um flexiblere Konditionen zu erzielen und die Verschuldung zu reduzieren. Durch diese Finanzierungskombination konnte Delivery Hero aggressiv expandieren und ist heute einer der weltweit führenden Anbieter von Essenslieferdiensten.'
+            };
+            document.getElementById('case-study-details').innerHTML = studies[company];
+        }
+
+        function showGlossaryTerm(term) {
+            const terms = {
+                'eigenkapital': 'Kapital, das von den Eigentümern des Unternehmens eingebracht wird oder durch die Ausgabe von Anteilen an neue Investoren generiert wird. Eigenkapitalgeber sind Miteigentümer und haben Anspruch auf Gewinnbeteiligung.',
+                'mezzanine-kapital': 'Eine Mischform zwischen Eigen- und Fremdkapital, das oft in Form von nachrangigen Darlehen oder stillen Beteiligungen bereitgestellt wird.',
+                'dividende': 'Ein Teil des Gewinns, den ein Unternehmen an seine Aktionäre ausschüttet. Höhe und Häufigkeit der Dividendenzahlung werden in der Hauptversammlung beschlossen.',
+                'unternehmensbewertung': 'Die Ermittlung des Werts eines Unternehmens, basierend auf verschiedenen Faktoren wie Ertragskraft, Marktposition und zukünftigen Wachstumsaussichten.',
+                'stille-beteiligung': 'Eine Form der Beteiligung, bei der der Investor kein Mitspracherecht erhält, jedoch am Gewinn beteiligt wird.'
+            };
+            document.getElementById('glossary-term-details').innerHTML = terms[term];
+        }
+
+        const quizQuestions = [
+            {
+                question: "Was ist ein Vorteil der Eigenkapitalfinanzierung?",
+                answers: [
+                    "Das Unternehmen muss das Kapital nach 5 Jahren zurückzahlen.",
+                    "Das Unternehmen erhält Kapital, ohne Zinsen zu zahlen oder Rückzahlungen leisten zu müssen.",
+                    "Die Investoren haben kein Mitspracherecht."
+                ],
+                correct: 1
+            },
+            {
+                question: "Was bedeutet 'Mezzanine-Finanzierung'?",
+                answers: [
+                    "Eine Finanzierungsform, die ausschließlich aus Eigenkapital besteht.",
+                    "Eine Finanzierungsform, die zwischen Eigen- und Fremdkapital liegt.",
+                    "Eine kurzfristige Kreditform für junge Unternehmen."
+                ],
+                correct: 1
+            },
+            {
+                question: "Was ist ein Nachteil der Beteiligungsfinanzierung?",
+                answers: [
+                    "Das Unternehmen muss höhere Steuern zahlen.",
+                    "Das Unternehmen verliert einen Teil der Kontrolle und muss Gewinne mit den Investoren teilen.",
+                    "Das Unternehmen muss einen Kredit aufnehmen."
+                ],
+                correct: 1
+            },
+            {
+                question: "Bei welchem Finanzierungsmodell werden Investoren direkt Miteigentümer des Unternehmens?",
+                answers: [
+                    "Fremdkapitalfinanzierung",
+                    "Mezzanine-Finanzierung",
+                    "Eigenkapitalfinanzierung"
+                ],
+                correct: 2
+            },
+            {
+                question: "Was ist der erste Schritt im Prozess der Beteiligungsfinanzierung?",
+                answers: [
+                    "Investorensuche",
+                    "Verhandlung der Konditionen",
+                    "Unternehmensbewertung"
+                ],
+                correct: 2
+            }
+        ];
+
+        function loadQuiz() {
+            let quizHTML = '';
+            quizQuestions.forEach((q, index) => {
+                quizHTML += `<h3>Frage ${index + 1}: ${q.question}</h3>`;
+                q.answers.forEach((answer, ansIndex) => {
+                    quizHTML += `<input type="radio" name="q${index}" value="${ansIndex}"> ${answer}<br>`;
+                });
+            });
+            document.getElementById('quiz-container').innerHTML = quizHTML;
+        }
+
+        function checkAnswers() {
+            let score = 0;
+            quizQuestions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === q.correct) {
+                    score++;
+                }
+            });
+            document.getElementById('quiz-results').innerHTML = `Sie haben ${score} von ${quizQuestions.length} Fragen richtig beantwortet.`;
+        }
+
+        loadQuiz();
+    </script>
+</body>
+</html>
